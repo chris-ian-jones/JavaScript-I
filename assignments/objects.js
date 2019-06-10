@@ -32,7 +32,7 @@ const personTwo = {
   "name": "Kennan",
   "gender": "M",
   "speak": function() {
-    return "Hello, my name is Kennan!";
+    return "Hello, my name is " + this.name + "!";
   }
 }
 
