@@ -65,7 +65,7 @@ let inventory = [{"id":1,"car_make":"Lincoln","car_model":"Navigator","car_year"
 // The dealer can't recall the information for a car with an id of 33 on his lot. Help the dealer find out which car has an id of 33 by logging the car's year, make, and model in the console log provided to you below:
 let recallInfoOfID = 33;
 
-for (let i = 0; i < inventory.length - 1; i++) {
+for (let i = 0; i < inventory.length; i++) {
   if (inventory[i].id === 33) {
   tempCarYear = inventory[i].car_year;
   tempCarMake = inventory[i].car_make;
@@ -78,14 +78,14 @@ console.log(`Car 33 is a ${tempCarYear} ${tempCarMake} ${tempCarModel}`);
 
 // ==== Challenge 2 ====
 // The dealer needs the information on the last car in their inventory.  What is the make and model of the last car in the inventory?  Log the make and model into the console.
-let lastCar = inventory.length - 1;
+let lastCar = inventory.length;
 console.log(`Make: ${inventory[lastCar].car_make}. Model: ${inventory[lastCar].car_model}`);
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
 let carModels = [];
 
-for (i = 0; i < inventory.length - 1; i++) {
+for (i = 0; i < inventory.length; i++) {
     carModels.push(inventory[i].car_model);
   }
 console.log(carModels.sort());
@@ -94,7 +94,7 @@ console.log(carModels.sort());
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
 let carYears = [];
 
-for (i = 0; i < inventory.length - 1; i++) {
+for (i = 0; i < inventory.length; i++) {
     carYears.push(inventory[i].car_year);
   }
 console.log(carYears.sort());
@@ -109,7 +109,7 @@ console.log(oldCars.length);
 // A buyer is interested in seeing only BMW and Audi cars within the inventory.  Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
 let BMWAndAudi = [];
 
-for (i = 0; i < inventory.length - 1; i++) {
+for (i = 0; i < inventory.length; i++) {
   if (inventory[i].car_make === "BMW" || inventory[i].car_make === "Audi") {
   BMWAndAudi.push({
   "id": inventory[i].id, 
